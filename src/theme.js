@@ -40,7 +40,12 @@ const customTheme = extendTheme({
         50: "#C5CDD4",
         100: "#666D73",
         200: "#393F45"
-      }
+      },
+      transparent: {
+        50: "#ffffff",
+        100: "#F3F6F9",
+        200: "#DCE1E5"
+      },
   }
 });
 

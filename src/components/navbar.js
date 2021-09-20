@@ -13,6 +13,7 @@ import {
   import logo from "../assets/sslogo.svg";
 
 
+
 const MenuItems = ({ children, path }) => (
     <ChakraProvider theme={customTheme}>
     <Text
@@ -37,13 +38,11 @@ const MenuItems = ({ children, path }) => (
         as="nav"
         justifyContent="space-between"
         alignItems="center"
-        px={5}
-        py={8}
+        px={95}
+        py={5}
         boxShadow={{ base: "md", md: "none" }}
         position={{ base: "sticky", md: "static" }}
-        top="0"
-        left="0"
-        zIndex={2}
+        // zIndex={2}
         bg={'white.50'}
       >
         <Image
@@ -54,7 +53,7 @@ const MenuItems = ({ children, path }) => (
         {/* <MenuItems path="/">Home</MenuItems> */}
         <MenuItems path="/about">About</MenuItems>
         <MenuItems path="/">Services</MenuItems>
-        <MenuItems path="/">Impact</MenuItems> 
+        <MenuItems path="/">Technology</MenuItems> 
         <MenuItems path="/">Insights</MenuItems>
         <MenuItems path="mailto:kelechi.odom@yahoo.com">Contact</MenuItems>
          {/* <IconButton
