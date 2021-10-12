@@ -35,6 +35,7 @@ import "@fontsource/domine/700.css";
   import esg from "../assets/undraw_environment_iaus.svg";
   import climatechange from "../assets/undraw_circles_y7s2.svg";
   import corpsoc from "../assets/undraw_collab_8oes.svg";
+  import letstalk from "../assets/undraw_real_time_collaboration_c62i.svg";
   import squarelysus from "../assets/landing-squarelysus.svg";
   import squarelyimp from "../assets/landing-sqimpact.svg";
   import delivered from "../assets/checklist.png";
@@ -376,23 +377,26 @@ const IndexPage = () => {
       <Stack
         textAlign={'center'}
         align={'center'}
-        spacing={{ base: 8, md: 9 }}
+        spacing={{ base: 5, md: 6 }}
         py={{ base: 15, md: 19 }}>
-          <Flex
-            justify={'center'}
-            align={'center'}
+          <Box
             position={'relative'}
-            w={'full'}>
-              {/* <Image
-                alt={'Image'}
-                fit={'contain'}
-                align={'center'}
-                w={'40%'}
-                src={
-                    collab
-                  }
-              /> */}
-          </Flex>
+            height={'400px'}
+            width={'50%'}
+            overflow={'hidden'}
+            mt={-220}
+            >
+            <Image
+            position={'relative'}
+              alt={'Hero Image'}
+              fit={'contain'}
+              align={'center'}
+              w={500}
+              src={
+                letstalk
+              }
+            />
+          </Box>
         <Heading
           fontWeight={'700'}
           color={"blue.100"}
@@ -409,9 +413,9 @@ const IndexPage = () => {
             rounded={'full'}
             px={6}
             colorScheme={'green'}
-            bg={'blue.100'}
+            bg={'green.200'}
             _hover={{ bg: 'orange.500' }}>
-            Discover
+            Let's talk
           </Button>
         </Stack>
         <Flex>
