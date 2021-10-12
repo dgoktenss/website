@@ -62,11 +62,11 @@ const SocialButton = (props) => {
   );
 };
 
-SocialButton.propTypes = {
-  children: PropTypes.string,
-  label: PropTypes.string,
-  href: PropTypes.string
-};
+// SocialButton.propTypes = {
+//   children: PropTypes.string,
+//   label: PropTypes.string,
+//   href: PropTypes.string
+// };
 
 
 const ListHeader = ({children}) => {

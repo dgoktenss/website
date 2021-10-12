@@ -1,18 +1,28 @@
 import { extendTheme } from "@chakra-ui/react";
-import "@fontsource/encode-sans-semi-expanded/700.css"; 
-import "@fontsource/open-sans/800.css"; 
+import "@fontsource/encode-sans-semi-expanded/800.css"; 
+import "@fontsource/open-sans/700.css"; 
+import "@fontsource/domine/700.css"; 
 import "@fontsource/mandali"
 
 const customTheme = extendTheme({
     fonts: {
-        heading: "Open Sans",
-        body: "Mandali"
+        heading: "Encode Sans Semi Expanded",
+        body: "Open Sans"
       },
   colors: {
     green: {
-        50: "#BCE0C5",  
-        100: "#53BC7D",
-        200: "#3FA285"
+        50: "#B1EBC8",  
+        100: "#7DD5A1",
+        200: "#53BC7D",
+        300: "#35A663",
+        400: "#189149"
+      },
+      ssgreen: {
+        50: "#99DCC8",  
+        100: "#65BEA3",
+        200: "#3FA284",
+        300: "#269070",
+        400: "#127758"
       },
       blue: {
         50:"#E9F6F7",

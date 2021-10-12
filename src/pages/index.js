@@ -2,18 +2,21 @@ import * as React from "react"
 import Hero from '../components/hero';
 import Layout from '../components/layout';
 import PropTypes from 'prop-types';
-import {  FcDonate, FcGlobe, FcLandscape, FcBullish, FcBiomass,FcConferenceCall } from 'react-icons/fc';
+import "@fontsource/domine/700.css"; 
+
  import {
       Container,
       Stack,
       Flex,
       Box,
+      Grid,
       Heading,
       Text,
       Button,
       Image,
       Icon,
       VStack,
+      Center,
       StackDivider,
       SimpleGrid,
       Link,
@@ -26,20 +29,18 @@ import {  FcDonate, FcGlobe, FcLandscape, FcBullish, FcBiomass,FcConferenceCall 
     } from '@chakra-ui/react';
   import { ChakraProvider} from "@chakra-ui/react";
   import customTheme from "../theme";
-  import { BsPerson } from 'react-icons/bs';
-  import { FiServer } from 'react-icons/fi';
-  import { GoLocation } from 'react-icons/go';
-  import analytics from "../assets/analytics.svg";
-  import dash from "../assets/dash.svg";
-  import collab from "../assets/collab.svg";
-  import handshake from "../assets/handshake.svg";
-  import office from "../assets/growth.svg";
-  import money from "../assets/money.svg";
-  import responsibility from "../assets/responsibility.svg";
-  import save from "../assets/save.svg";
-  import help from "../assets/help.svg";
-
-
+  import whoweare from "../assets/undraw_Business_decisions_re_84ag.svg";
+  import whatwedo from "../assets/undraw_Working_re_ddwy.svg";
+  import investing from "../assets/undraw_wallet_aym5.svg";
+  import esg from "../assets/undraw_environment_iaus.svg";
+  import climatechange from "../assets/undraw_circles_y7s2.svg";
+  import corpsoc from "../assets/undraw_collab_8oes.svg";
+  import squarelysus from "../assets/landing-squarelysus.svg";
+  import squarelyimp from "../assets/landing-sqimpact.svg";
+  import delivered from "../assets/checklist.png";
+  import served from "../assets/completed-task.png";
+  import years from "../assets/good-conversion-rate.png";
+  import markets from "../assets/global.png";
 
 
 
@@ -50,293 +51,327 @@ const IndexPage = () => {
     <ChakraProvider theme={customTheme}>
     <Layout>
     <Hero />
-    <Box zIndex={6} w={'100%'} bg={'blue.50'} mx={'auto'} pt={5} py={10} px={{ base: 2, sm: 12, md: 17 }}>
-    <Stack spacing={6} as={Container} maxW={'4xl'} textAlign={'center'} position= {'relative'} py={4}>
-    <Heading fontSize={'5xl'} color={'blue.300'}>Sustainable Square At A Glance</Heading>
-      </Stack>
-    <Box maxW="6xl" mx={'auto'} pt={2} px={{ base: 2, sm: 12, md: 17 }}>
-      <SimpleGrid columns={{ base: 1, md: 4 }} spacing={{ base: 5, lg: 12}}>
+
+    <Box  w={'100%'} position={'relative'}  
+             bg={'blue.300'} mx={'auto'} pt={5} py={10} px={{ base: 2, sm: 12, md: 17 }}>
+    <Stack spacing={6} as={Container} maxW={'4xl'} textAlign={'center'} position= {'relative'} py={10}>
+    <Heading fontSize={'4xl'} color={'blue.50'}>Sustainable Square At A Glance</Heading>
+    </Stack>
+    <Box maxW="6xl" mx={'auto'} pt={2} px={{ base: 2, sm: 12, md: 15 }}>
+      <SimpleGrid columns={{ base: 1, md: 4 }} spacing={{ base: 5, lg: 7}}>
         <StatsCard2
           title={'Clients Served'}
           stat={'100+'}
-          icon={<BsPerson size={'3em'} />}
+          icon={<img src={served}/>}
         />
         <StatsCard2
           title={'Projects Delivered'}
           stat={'150+'}
-          icon={<FiServer size={'3em'} />}
+          icon={<img src={delivered}/>}
         />
         <StatsCard2
           title={'Markets of Operation'}
           stat={'15+'}
-          icon={<GoLocation size={'3em'} />}
+          icon={<img src={markets}/>}
         />
          <StatsCard2
           title={'Years of Operation'}
           stat={'10'}
-          icon={<GoLocation size={'3em'} />}
+          icon={<img src={years}/>}
         />
       </SimpleGrid>
     </Box>
-      </Box> 
-      <Container maxW={'5xl'}>
+    </Box>
+
+
+      <Container maxW={'7xl'}>
         <Stack
-          align={'center'}
+          spacing={{ base: 5, md: 8 }}
+          py={{ base: 5, md: 8 }}
+          direction={{ base: 'column', md: 'row' }}>
+
+          <Stack flex={1} maxW={'50%'} mt={'59px'}  spacing={{ base: 5 }}>
+          <Text
+            textTransform={'uppercase'}
+            color={'gray.50'}
+            fontWeight={600}
+            fontSize={'sm'}
+            mb={-3}
+            alignSelf={'flex-start'}
+            >
+            Who We Are
+          </Text>
+            <Heading
+              lineHeight={1.1}
+              fontWeight={600}
+              fontSize={{ base: '3xl' }}>
+              <Text
+                as={'span'}
+                position={'relative'}
+                color={'green.200'}
+                lineHeight={'130%'}
+                >
+                We drive change by empowering organisations for a redefined impact.
+                
+              </Text>
+            </Heading>
+            <Text color={'gray.200'} fontSize="lg">
+ We support organizations to identify Environmental, Social and Governance (ESG) Risks, 
+ empower them to become more resilient, up-scale their impact and assist them in 
+ conducting their operations in a responsible and inclusive manner.
+            </Text>
+            <Button
+            w={'25%'}
+            size="md"
+            px={6}
+            bg={'#151f21'}
+            color={'white'}
+            bg={'green.200'}
+            rounded={'full'}
+            _hover={{
+              transform: 'translateY(-2px)',
+              boxShadow: 'lg',
+            }}>
+            Learn more
+          </Button>
+          </Stack>
+
+          <Box
+            position={'relative'}
+            height={'400px'}
+            width={'50%'}
+            overflow={'hidden'}
+            mt={12}
+            >
+            <Image
+            position={'relative'}
+            mt={12}
+            ml={31}
+              alt={'Hero Image'}
+              fit={'contain'}
+              align={'center'}
+              w={500}
+              src={
+                whoweare
+              }
+            />
+          </Box>
+        </Stack>
+
+        <Stack
           spacing={{ base: 5, md: 10 }}
           py={{ base: 5, md: 10 }}
           direction={{ base: 'column', md: 'row' }}>
-          <Stack flex={1} spacing={{ base: 5, md: 10 }}>
-            <Heading
-              lineHeight={1.1}
-              fontWeight={600}
-              fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
-              <Text
-                as={'span'}
-                position={'relative'}
-                color={'blue.300'}
-                >
-                Who We Are
-              </Text>
-            </Heading>
-            <Text color={'gray.100'}>
- We support organizations to identify Environmental, Social and Governance (ESG) Risks, empower them to become more resilient, drive and up-scale their impact and assist them in conducting their operations in a responsible and inclusive manner.
-            </Text>
-            <Stack
-              spacing={{ base: 4, sm: 6 }}
-              direction={{ base: 'column', sm: 'row' }}>
-              <Button
-                rounded={'full'}
-                size={'lg'}
-                fontWeight={'bold'}
-                px={6}
-                bg={'green.100'}
-                _hover={{ bg: 'green.200' }}
-                color={'white'}>
-                About Us
-              </Button>
-            </Stack>
-          </Stack>
-          <Flex
-            flex={1}
-            justify={'center'}
-            align={'center'}
+          <Box
             position={'relative'}
-            w={'full'}>
-            <Blob
-              w={'250%'}
-              h={'150%'}
-              position={'absolute'}
-              top={'-20%'}
-              left={0}
-              zIndex={-1}
-              color={'#F3F6F9'}
+            height={'450px'}
+            width={'50%'}
+            overflow={'hidden'}
+            ml={0}
+            >
+            <Image
+              alt={'Hero Image'}
+              fit={'contain'}
+              align={'start'}
+              w={500}
+              src={
+                whatwedo
+              }
             />
-              <Image
-                alt={'Side Image'}
-                fit={'contain'}
-                align={'center'}
-                w={'100%'}
-                h={'100%'}
-                src={
-                  handshake
-                }
-              />
-          </Flex>
-        </Stack>
-      </Container>
-
-    <Container maxW={'6xl'}>
-        <Stack
-          align={'center'}
-          spacing={{ base: 8, md: 10 }}
-          py={{ base: 20, md: 28 }}
-          direction={{ base: 'column', md: 'row' }}>
-            <Flex
-            flex={1}
-            justify={'center'}
-            align={'center'}
-            position={'relative'}
-            w={'full'}>
-            <Blob
-              w={'250%'}
-              h={'135%'}
-              position={'absolute'}
-              top={'-20%'}
-              left={0}
-              zIndex={-1}
-              color={'#F3F6F9'}
-            />
-              <Image
-                alt={'Image'}
-                fit={'contain'}
-                align={'center'}
-                w={'100%'}
-                src={
-                    analytics
-                  }
-              />
-          </Flex>
-          <Stack px={5} flex={1} spacing={{ base: 5, md: 10}} >
-            <Heading
-              lineHeight={1.1}
-              fontWeight={600}
-              fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
-              <Text
-                as={'span'}
-                position={'relative'}
-                color={'blue.300'}
-                >
-                What We Do
-              </Text>
-            </Heading>
-            <Text color={'gray.100'}>
-            We work hand in hand with clients to help them prosper, while creating shared value for all stakeholders involved, either through developing effective strategies, values and tool, reporting on progress or empowering them through capacity building. 
-            </Text>
-            <Stack
-              spacing={{ base: 4, sm: 6 }}
-              direction={{ base: 'column', sm: 'row' }}>
-              <Button
-                rounded={'full'}
-                size={'lg'}
-                fontWeight={'bold'}
-                px={6}
-                bg={'green.100'}
-                _hover={{ bg: 'green.200' }}
-                color={'white'}>
-                Services
-              </Button>
-            </Stack>
-          </Stack>
-        </Stack>
-      </Container>
-    <Stack spacing={6} as={Container} maxW={'4xl'} textAlign={'center'} position= {'relative'} py={5}>
-    <Heading fontSize={'5xl'} color={'blue.300'}>Our Services</Heading>
-    </Stack>
-
-    <Container maxW={'6xl'} py={5}>
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-      <Flex >
-      {/* <Heading fontSize={'5xl'} color={'blue.300'}>Advisory</Heading> */}
-          <Image
-            rounded={'md'}
-            alt={'feature image'}
-            src={
-            office
-            }
-            objectFit={'contain'}
-          />
-        </Flex>
-        <Stack spacing={4}>
-          <Heading color={'blue.300'}>Advisory</Heading>
-          <Text color={'gray.500'} fontSize={'lg'}>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore
+          </Box>
+          <Stack flex={1} maxW={'50%'} mt={'59px'} ml={0} mr={0} spacing={{ base: 5 }}>
+          <Text
+            textTransform={'uppercase'}
+            color={'gray.50'}
+            fontWeight={600}
+            fontSize={'sm'}
+            mb={-3}
+            alignSelf={'flex-start'}
+            >
+            What We Do
           </Text>
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-        <Feature
-                    icon={          <Image
-                      rounded={'md'}
-                      alt={'feature image'}
-                      src={
-                      responsibility
-                      }
-                      objectFit={'contain'}
-                    />}
+            <Heading
+              lineHeight={1.1}
+              fontWeight={600}
+              fontSize={{ base: '3xl' }}>
+              <Text
+                as={'span'}
+                position={'relative'}
+                color={'green.200'}
+                lineHeight={'130%'}
+                >
+                We work alongside our clients to guide their sustainability journeys.
+              </Text>
+            </Heading>
+            <Text color={'gray.200'} fontSize="lg">
+            We work hand in hand with clients to help them prosper, while creating shared value for all stakeholders involved, either through developing effective strategies, values and tool, reporting on progress or empowering them through capacity building.
+            </Text>
+            <Button
+            w={'35%'}
+            size="md"
+            px={6}
+            bg={'#151f21'}
+            color={'white'}
+            bg={'green.200'}
+            rounded={'full'}
+            _hover={{
+              transform: 'translateY(-2px)',
+              boxShadow: 'lg',
+            }}>
+            See how it works
+          </Button>
+          </Stack>
+        </Stack>
+
+      </Container>
+
+    <Box w={'100%'} bg={'ssgreen.200'}>
+    <Stack as={Container} maxW={'6xl'} textAlign={'center'} py={12} mt={0}>
+    <Heading mb={10} fontSize={'4xl'} color={'white.50'} mt={12}> Our Advisory Services</Heading>
+   <Box mx={8} maxW={'100%'} py={12} textAlign={'center'}>
+    <SimpleGrid columns={{ base: 1, md: 4 }} textAlign={'center'} spacing={12}>
+      <Feature
           title={'ESG & Sustainability'}
-          text={
-            'Our ESG advisory services let you take a more responsible approach to investing while still doing your best for your long-term security.'
-          }
+          text={'Take a more responsible approach to investing while doing the best for your long-term security.'}
+          icon={<img src={esg}/>}
         />
         <Feature
-          icon={          <Image
-            rounded={'md'}
-            alt={'feature image'}
-            src={
-            money
-            }
-            objectFit={'contain'}
-          />}          title={'Sustainable Investing'}
-          text={
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
-          }
+          title={'Sustainable Investing'}
+          text={'Take a more responsible approach to investing while doing the best for your long-term security.'}
+          icon={<img src={investing}/>}
         />
-        <Feature
-          icon={          <Image
-            rounded={'md'}
-            alt={'feature image'}
-            src={
-            save
-            }
-            objectFit={'contain'}
-          />}          title={'Environmental Responsibility & Climate Change'}
-          text={
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
-          }
+      <Feature
+          title={'Environmental Responsibility'}
+          text={'Take a more responsible approach to investing while doing the best for your long-term security.'}
+          icon={<img src={climatechange}/>}
         />
-        <Feature
-          icon={          <Image
-            rounded={'md'}
-            alt={'feature image'}
-            src={
-            help
-            }
-            objectFit={'contain'}
-          />}
-          title={'Social Impact & Corporate Social Responsibility'}
-          text={
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
-          }
+         <Feature
+          title={'Corporate Social Responsibility'}
+          text={'Take a more responsible approach to investing while doing the best for your long-term security.'}
+          icon={<img src={corpsoc}/>}
         />
       </SimpleGrid>
-        </Stack>
-      </SimpleGrid>
-    </Container>
+    </Box>
+    </Stack>
+    <Flex w={'full'} mt={-300}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,128L30,106.7C60,85,120,43,180,48C240,53,300,107,360,154.7C420,203,480,245,540,224C600,203,660,117,720,90.7C780,64,840,96,900,133.3C960,171,1020,213,1080,192C1140,171,1200,85,1260,64C1320,43,1380,85,1410,106.7L1440,128L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
+    </Flex>
+    </Box>
+    
 
-    <Container maxW={'6xl'} py={5}>
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-        <Stack spacing={4}>
-          <Heading color={'blue.300'}>Technology</Heading>
-          <Text color={'gray.500'} fontSize={'lg'}>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore
-          </Text>
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-        <Feature
-          icon={<Icon as={FcBiomass} w={10} h={10} />}
-          title={'Squarely Sustainability'}
-          text={
-            'Our ESG advisory services let you take a more responsible approach to investing while still doing your best for your long-term security.'
-          }
-        />
-        <Feature
-          icon={<Icon as={FcDonate} w={10} h={10} />}
-          title={'Squarely Impact'}
-          text={
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
-          }
-        />
-      </SimpleGrid>
-        </Stack>
-        <Flex>
+    <Stack spacing={6} as={Container} maxW={'7xl'} textAlign={'center'} justify={'center'} align={'center'} position= {'relative'} mb={6}>
+    <Heading fontSize={'4xl'} color={'blue.300'}>Our Technology Services</Heading>
+    </Stack>   
+ 
+    <Stack py={5} spacing={10} direction={{ base: 'column', md: 'row' }} maxW={'full'} textAlign={'center'} position= {'relative'} justify={'center'} align={'center'}>
+      
+      <Box
+        maxW={'450px'}
+        w={'full'}
+        bg={'white'}
+        boxShadow={'2xl'}
+        rounded={'2xl'}
+        overflow={'hidden'}>
+        <Heading align={'center'} textAlign={'center'} fontSize={'2xl'} fontWeight={500} mt={5} fontFamily={'heading'}>
+              Squarely Sustainability
+        </Heading>
+        <Flex justify={'center'} mt={0}>
           <Image
-            rounded={'md'}
-            alt={'feature image'}
+            size={'md'}
             src={
-            dash
+              squarelysus
             }
-            objectFit={'cover'}
           />
         </Flex>
-      </SimpleGrid>
-    </Container>
+        <Box p={8}>
+          <Stack spacing={3} align={'center'} mb={1}>
+            <Text textAlign={'center'} fontFamily={"Domine"} fontWeight={600} fontSize={'xl'}  color={'blue.300'}>
+              Sustainability reports  <br/>  made easier than ever before
+              </Text>
+              <Text textAlign={'center'} fontFamily={'body'} fontWeight={400} fontSize={'md'}  color={'blue.300'}>
+              Squarely Sustainability is an  <br/> innovative sustainability reporting tool 
+              <br/> that automates complex processes and tasks.
+              </Text>
+              <Button
+          align={'center'}
+          rounded={'full'}
+          size={'md'}
+          fontWeight={'bold'}
+          px={6}
+          color={'white.50'}
+          bg={'green.200'}
+            _hover={{
+              transform: 'translateY(-2px)',
+              boxShadow: 'lg',
+            }}>
+            Discover
+          </Button>
+          </Stack>
+        </Box>
+        </Box>
+        
+        
+        <Box
+        maxW={'450px'}
+        w={'full'}
+        bg={'white'}
+        boxShadow={'2xl'}
+        rounded={'2xl'}
+        overflow={'hidden'}>
+        <Heading align={'center'} textAlign={'center'} fontSize={'2xl'} fontWeight={500} mt={5} fontFamily={'heading'}>
+              Squarely Impact
+        </Heading>
+        <Flex justify={'center'} mt={0}>
+          <Image
+            size={'md'}
+            src={
+              squarelyimp
+            }
+          />
+        </Flex>
+        <Box p={8}>
+          <Stack spacing={3} align={'center'} mb={1}>
+            <Text textAlign={'center'} fontFamily={"Domine"} fontWeight={600} fontSize={'xl'}  color={'blue.300'}>
+            Measuring and managing  <br/> genuine impact
+              </Text>
+              <Text textAlign={'center'} fontFamily={'body'} fontWeight={400} fontSize={'md'}  color={'blue.300'}>
+              Squarely Impact allows NGOs <br/>  companies, and governments to 
+              track <br/>  impact  until the very last bit of their projects. 
+              </Text>
+              <Button
+          align={'center'}
+          rounded={'full'}
+          size={'md'}
+          fontWeight={'bold'}
+          px={6}
+          color={'white.50'}
+          bg={'green.200'}
+            _hover={{
+              transform: 'translateY(-2px)',
+              boxShadow: 'lg',
+            }}>
+            Discover
+          </Button>
+          </Stack>
+        </Box>
+        </Box>
+        </Stack>
 
-    <Flex
+
+
+
+    <Box
       bg={"blue.300"}
-      p={50}
-      w="full"
+      p={0}
+      w={"100%"}
       alignItems="center"
       justifyContent="center"
+      mt={10}
     >
+
+<Flex w={'full'} mt={-100}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,128L30,106.7C60,85,120,43,180,48C240,53,300,107,360,154.7C420,203,480,245,540,224C600,203,660,117,720,90.7C780,64,840,96,900,133.3C960,171,1020,213,1080,192C1140,171,1200,85,1260,64C1320,43,1380,85,1410,106.7L1440,128L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path></svg>    
+    </Flex>
     <Container maxW={'6xl'}>
       <Stack
         textAlign={'center'}
@@ -348,7 +383,7 @@ const IndexPage = () => {
             align={'center'}
             position={'relative'}
             w={'full'}>
-              <Image
+              {/* <Image
                 alt={'Image'}
                 fit={'contain'}
                 align={'center'}
@@ -356,7 +391,7 @@ const IndexPage = () => {
                 src={
                     collab
                   }
-              />
+              /> */}
           </Flex>
         <Heading
           fontWeight={'700'}
@@ -383,16 +418,16 @@ const IndexPage = () => {
         </Flex>
       </Stack>
     </Container>
-    </Flex>
+    </Box>
 
     </Layout>
     </ChakraProvider>
   )
 }
 
-
-
 export default IndexPage
+
+
 
 export const Blob = (props, IconProps) => {
   return (
@@ -413,24 +448,80 @@ export const Blob = (props, IconProps) => {
 };
 
 
+const features = [
+  {
+    title: 'ESG & Sustainability',
+    content: (
+      <>
+        Our ESG advisory services let you take a more responsible approach to investing while still doing your best for your long-term security.
+      </>
+    ),
+  },
+  {
+    title: 'Sustainable Investing',
+    content: (
+      <>
+We aim to provide solutions to the ever-growing and changing industry of asset managers in order to foster sustainable growth.
+      </>
+    ),
+  },
+  {
+    title: 'Environmental Responsibility  & Climate Change',
+    content: (
+      <>
+Our ESG advisory services let you take a more responsible approach to investing while still doing your best for your long-term security.
+      </>
+    ),
+  },
+  {
+    title: 'Social Impact & Corporate Social Responsibility',
+    content: (
+      <>
+Our ESG advisory services let you take a more responsible approach to investing while still doing your best for your long-term security.
+      </>
+    ),
+  },
+];
+
 const Feature = (props) => {
   const { title, text,icon } = props;
   return (
-    <Stack>
+    <Box
+    bg={'white.50'}
+    mb={4}
+    boxShadow={'2xl'}
+    borderWidth="1px"
+    rounded={'2xl'}
+    align={'center'}
+    pos={'relative'}
+    borderColor={'white.50'}
+    borderRadius={'2xl'}>
+    <Stack
+    width={'80%'}
+    spacing={{ base: 2, md: 3 }}
+    py={{ base: 2, md: 2 }}
+    >
       <Flex
-        w={16}
-        h={16}
+        w={125}
+        h={125}
         align={'center'}
+        textAlign={'center'}
         justify={'center'}
-        color={'white'}
         rounded={'full'}
-        // bg={'green.100'}
-        mb={1}>
+        ml={5}
+        mt={-65}
+        >
         {icon}
       </Flex>
-      <Text fontWeight={600}>{title}</Text>
-      <Text color={'gray.100'}>{text}</Text>
+      <Text fontSize={'xl'} align={'center'} fontWeight={600}>{title}</Text>
+      
+      <Text align={'center'} color={'gray.100'}>{text}</Text>
+
+      <Button colorScheme="green" variant="link">
+       Learn more
+      </Button>
     </Stack>
+    </Box>
   );
 };
 
@@ -440,65 +531,6 @@ Feature.propTypes = {
   icon: PropTypes.string
 };
 
-const Feature2 = (props) => {
-  const { title, text,icon } = props;
-  return (
-    <VStack
-    textAlign="center"
-    justify="center">
-      <Flex
-        w={16}
-        h={16}
-        align={'center'}
-        justify={'center'}
-        color={'white'}
-        rounded={'full'}
-        bg={'green.100'}
-        mb={1}>
-        {icon}
-      </Flex>
-      <Text color={'blue.300'} fontSize={'2xl'} fontWeight={'bold'}>{title}</Text>
-      <Text color={'blue.300'}>{text}</Text>
-    </VStack>
-  );
-};
-
-Feature2.propTypes = {
-  title: PropTypes.string,
-  text: PropTypes.string,
-  icon: PropTypes.string
-};
-
-const StatsCard = (props) => {
-  const { icon, stat } = props;
-  return (
-    <Stat
-      px={{ base: 4, md: 8 }}
-      py={'5'}
-      shadow={'xl'}
-      border={'1px solid'}
-      borderColor={'white.50'}
-      bg={'white.50'}
-      rounded={'lg'}
-      >
-      {/* <StatLabel fontWeight={'medium'} isTruncated>
-        {title}
-      </StatLabel> */}
-      <StatNumber fontSize={'2xl'} fontWeight={'medium'} textAlign={'center'}>
-        {stat}
-      </StatNumber>
-          <Flex align={'center'}>
-      {icon}
-      </Flex>
-    </Stat>
-  );
-};
-
-StatsCard.propTypes = {
-  title:  PropTypes.string,
-  stat:  PropTypes.string,
-  icon: PropTypes.string
-};
 
 const StatsCard2=(props) => {
   const { title, stat, icon } = props;
@@ -506,22 +538,32 @@ const StatsCard2=(props) => {
     <Stat
       px={{ base: 2, md: 4 }}
       py={'2'}
+      // shadow={'xl'}
+      // border={'1px solid'}
+      // borderColor={'gray.800'}
+      // rounded={'lg'}
       >
-      <Flex justifyContent={'space-around'}>
+      <Flex>
+      <Flex
+        w={50}
+        h={50}
+        align={'center'}
+
+        rounded={'full'}
+        ml={5}
+        mt={3}
+        mr={-2}
+        >
+          {icon}
+        </Flex>
         <Box pl={{ base: 2, md: 3 }}>
-          <StatNumber color={'blue.200'} fontSize={'7xl'} fontWeight={'bold'}>
+          <StatNumber color={'blue.100'} fontSize={'5xl'} fontWeight={'bold'}>
             {stat}
           </StatNumber>
-          <StatLabel color={'blue.300'} pl={3} fontWeight={'light'} isTruncated>
+          <StatLabel color={'blue.50'} pl={2} fontWeight={'light'} isTruncated>
             {title}
           </StatLabel>
         </Box>
-        {/* <Box
-          my={'auto'}
-          color={'gray.800'}
-          alignContent={'center'}>
-          {icon}
-        </Box> */}
       </Flex>
     </Stat>
   );
@@ -533,40 +575,3 @@ StatsCard2.propTypes = {
   icon: PropTypes.string
 };
 
-
-    {/* <Stack spacing={6} as={Container} maxW={'4xl'} textAlign={'center'} position= {'relative'} zIndex={1}>
-        <Heading fontSize={'5xl'} color={'blue.300'}>Services</Heading>
-        <Text color={'blue.200'} fontSize={'xl'}>
-        Our team of experts has worked with leading organizations in various industries, 
-        across different geographies, to transform the way they conduct business.        
-        </Text>
-      </Stack> */}
-      {/* <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 20 }} mt={10} mr={10} ml={10}>
-        <StatsCard stat={'Advisory'} icon={<Icon as={FcBiomass} w={40} h={40} align={'center'} />} />
-        <StatsCard stat={'Technology'} />
-        <StatsCard stat={'Responsible Investment'} />
-      </SimpleGrid> */}
-      {/* <Box align={'center'} p={4}>
-      <SimpleGrid align={'center'} columns={{ base: 1, md: 3 }} spacing={15}>
-        <Feature2
-          icon={<Icon as={FcLandscape} w={10} h={10} />}
-          title={'Advisory'}
-          text={
-            'ESG, Climate Change and Social Impact'
-          }
-        />
-        <Feature2
-          icon={<Icon as={FcLandscape} w={10} h={10} />}
-          title={'Technology'}
-          text={
-            'Technologies for ESG and Impact Management'
-          }
-        />
-        <Feature2
-          icon={<Icon as={FcLandscape} w={10} h={10} />}
-          title={'Responsible Investment'}
-          text={
-            'Responsible Capital Deployment Practices'
-          }
-        />
-      </SimpleGrid> </Box> */} 
