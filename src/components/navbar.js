@@ -30,6 +30,7 @@ import {
 } from '@chakra-ui/icons';
 
 
+
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
 
@@ -48,7 +49,7 @@ export default function WithSubnavigation() {
         align={'center'}>
         <Flex
           flex={{ base: 1, md: 'auto' }}
-          ml={{ base: -2 }}
+          ml={{ base: 0 }}
           display={{ base: 'flex', md: 'none' }}>
           <IconButton
             onClick={onToggle}

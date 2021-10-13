@@ -42,6 +42,7 @@ import "@fontsource/domine/700.css";
   import served from "../assets/completed-task.png";
   import years from "../assets/good-conversion-rate.png";
   import markets from "../assets/global.png";
+  import bg1 from "../assets/bg1.svg";
 
 
 
@@ -84,19 +85,20 @@ const IndexPage = () => {
     </Box>
     </Box>
 
-
+    <Box w={'100%'} bgImage={bg1}>
       <Container maxW={'7xl'}>
         <Stack
           spacing={{ base: 5, md: 8 }}
           py={{ base: 5, md: 8 }}
           direction={{ base: 'column', md: 'row' }}>
 
-          <Stack flex={1} maxW={'50%'} mt={'59px'}  spacing={{ base: 5 }}>
+          <Stack flex={1} spacing={{ base: 5 , md: 10 }}>
           <Text
             textTransform={'uppercase'}
-            color={'gray.50'}
+            color={'blue.300'}
             fontWeight={600}
-            fontSize={'sm'}
+            fontFamily={'heading'}
+            fontSize={'lg'}
             mb={-3}
             alignSelf={'flex-start'}
             >
@@ -104,15 +106,16 @@ const IndexPage = () => {
           </Text>
             <Heading
               lineHeight={1.1}
-              fontWeight={600}
-              fontSize={{ base: '3xl' }}>
+              fontWeight={200}
+              fontFamily={'body'}
+              fontSize={{ base: '2xl' }}>
               <Text
                 as={'span'}
                 position={'relative'}
                 color={'green.200'}
                 lineHeight={'130%'}
                 >
-                We drive change by empowering organisations for a redefined impact.
+                We drive change by empowering organisations <br/> for a redefined impact.
                 
               </Text>
             </Heading>
@@ -121,71 +124,72 @@ const IndexPage = () => {
  empower them to become more resilient, up-scale their impact and assist them in 
  conducting their operations in a responsible and inclusive manner.
             </Text>
+            <Stack
+            direction={'column'}
+            spacing={3}
+            align={'center'}
+            alignSelf={'start'}
+            position={'relative'}>
             <Button
-            w={'25%'}
-            size="md"
-            px={6}
-            bg={'#151f21'}
-            color={'white'}
-            bg={'green.200'}
-            rounded={'full'}
-            _hover={{
-              transform: 'translateY(-2px)',
-              boxShadow: 'lg',
-            }}>
-            Learn more
-          </Button>
+              colorScheme={'green'}
+              bg={'green.200'}
+              rounded={'full'}
+              px={6}
+              _hover={{
+                bg: 'green.400',
+              }}>
+              More about us
+            </Button>
+          </Stack>
           </Stack>
 
-          <Box
-            position={'relative'}
-            height={'400px'}
-            width={'50%'}
-            overflow={'hidden'}
-            mt={12}
-            >
+          <Flex
+          flex={1}
+          justify={'center'}
+          align={'center'}
+          position={'relative'}
+          w={'full'}>
             <Image
-            position={'relative'}
-            mt={12}
-            ml={31}
               alt={'Hero Image'}
-              fit={'contain'}
+              fit={'cover'}
               align={'center'}
-              w={500}
+              w={'100%'}
+              h={'100%'}
               src={
                 whoweare
               }
             />
-          </Box>
+          </Flex>
         </Stack>
 
         <Stack
           spacing={{ base: 5, md: 10 }}
           py={{ base: 5, md: 10 }}
           direction={{ base: 'column', md: 'row' }}>
-          <Box
-            position={'relative'}
-            height={'450px'}
-            width={'50%'}
-            overflow={'hidden'}
-            ml={0}
-            >
+          <Flex
+          flex={1}
+          justify={'center'}
+          align={'center'}
+          position={'relative'}
+          w={'full'}>
             <Image
               alt={'Hero Image'}
-              fit={'contain'}
-              align={'start'}
-              w={500}
+              fit={'cover'}
+              align={'center'}
+              w={'100%'}
+              h={'100%'}
               src={
                 whatwedo
               }
             />
-          </Box>
-          <Stack flex={1} maxW={'50%'} mt={'59px'} ml={0} mr={0} spacing={{ base: 5 }}>
+          </Flex>
+          <Stack flex={1} spacing={{ base: 5 , md: 10 }}>
           <Text
             textTransform={'uppercase'}
-            color={'gray.50'}
+            color={'blue.300'}
             fontWeight={600}
-            fontSize={'sm'}
+            fontFamily={'heading'}
+            fontSize={'lg'}
             mb={-3}
             alignSelf={'flex-start'}
             >
@@ -193,8 +197,9 @@ const IndexPage = () => {
           </Text>
             <Heading
               lineHeight={1.1}
-              fontWeight={600}
-              fontSize={{ base: '3xl' }}>
+              fontWeight={200}
+              fontFamily={'body'}
+              fontSize={{ base: '2xl' }}>
               <Text
                 as={'span'}
                 position={'relative'}
@@ -207,24 +212,28 @@ const IndexPage = () => {
             <Text color={'gray.200'} fontSize="lg">
             We work hand in hand with clients to help them prosper, while creating shared value for all stakeholders involved, either through developing effective strategies, values and tool, reporting on progress or empowering them through capacity building.
             </Text>
+            <Stack
+            direction={'column'}
+            spacing={3}
+            align={'start'}
+            alignSelf={'start'}
+            position={'relative'}>
             <Button
-            w={'35%'}
-            size="md"
-            px={6}
-            bg={'#151f21'}
-            color={'white'}
-            bg={'green.200'}
-            rounded={'full'}
-            _hover={{
-              transform: 'translateY(-2px)',
-              boxShadow: 'lg',
-            }}>
-            See how it works
-          </Button>
+              colorScheme={'green'}
+              bg={'green.200'}
+              rounded={'full'}
+              px={6}
+              _hover={{
+                bg: 'green.400',
+              }}>
+              See how it works
+            </Button>
+          </Stack>
           </Stack>
         </Stack>
 
       </Container>
+      </Box>
 
     <Box w={'100%'} bg={'ssgreen.200'}>
     <Stack as={Container} maxW={'6xl'} textAlign={'center'} py={12} mt={0}>
@@ -233,34 +242,34 @@ const IndexPage = () => {
     <SimpleGrid columns={{ base: 1, md: 4 }} textAlign={'center'} spacing={12}>
       <Feature
           title={'ESG & Sustainability'}
-          text={'Take a more responsible approach to investing while doing the best for your long-term security.'}
+          // text={'Take a more responsible approach to investing while doing the best for your long-term security.'}
           icon={<img src={esg}/>}
         />
         <Feature
           title={'Sustainable Investing'}
-          text={'Take a more responsible approach to investing while doing the best for your long-term security.'}
+          // text={'Take a more responsible approach to investing while doing the best for your long-term security.'}
           icon={<img src={investing}/>}
         />
       <Feature
-          title={'Environmental Responsibility'}
-          text={'Take a more responsible approach to investing while doing the best for your long-term security.'}
+          title={'Environmental Responsibility & Climate Change'}
+          // text={'Take a more responsible approach to investing while doing the best for your long-term security.'}
           icon={<img src={climatechange}/>}
         />
          <Feature
           title={'Corporate Social Responsibility'}
-          text={'Take a more responsible approach to investing while doing the best for your long-term security.'}
+          // text={'Take a more responsible approach to investing while doing the best for your long-term security.'}
           icon={<img src={corpsoc}/>}
         />
       </SimpleGrid>
     </Box>
     </Stack>
-    <Flex w={'full'} mt={-300}>
+    {/* <Flex w={'full'} mt={-300}>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,128L30,106.7C60,85,120,43,180,48C240,53,300,107,360,154.7C420,203,480,245,540,224C600,203,660,117,720,90.7C780,64,840,96,900,133.3C960,171,1020,213,1080,192C1140,171,1200,85,1260,64C1320,43,1380,85,1410,106.7L1440,128L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
-    </Flex>
+    </Flex> */}
     </Box>
     
 
-    <Stack spacing={6} as={Container} maxW={'7xl'} textAlign={'center'} justify={'center'} align={'center'} position= {'relative'} mb={6}>
+    <Stack spacing={6} as={Container} maxW={'7xl'} textAlign={'center'} justify={'center'} align={'center'} position= {'relative'} mt={{ base: 5, lg: 10 }} mb={{ base: 5, lg: 10 }}>
     <Heading fontSize={'4xl'} color={'blue.300'}>Our Technology Services</Heading>
     </Stack>   
  
@@ -370,22 +379,21 @@ const IndexPage = () => {
       mt={10}
     >
 
-<Flex w={'full'} mt={-100}>
+{/* <Flex w={'full'} mt={-100}>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,128L30,106.7C60,85,120,43,180,48C240,53,300,107,360,154.7C420,203,480,245,540,224C600,203,660,117,720,90.7C780,64,840,96,900,133.3C960,171,1020,213,1080,192C1140,171,1200,85,1260,64C1320,43,1380,85,1410,106.7L1440,128L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path></svg>    
-    </Flex>
+    </Flex> */}
     <Container maxW={'6xl'}>
       <Stack
         textAlign={'center'}
         align={'center'}
         spacing={{ base: 5, md: 6 }}
         py={{ base: 15, md: 19 }}>
-          <Box
-            position={'relative'}
-            height={'400px'}
-            width={'50%'}
-            overflow={'hidden'}
-            mt={-220}
-            >
+        <Flex
+          flex={1}
+          justify={'center'}
+          align={'center'}
+          position={'relative'}
+          w={'full'}>
             <Image
             position={'relative'}
               alt={'Hero Image'}
@@ -396,7 +404,7 @@ const IndexPage = () => {
                 letstalk
               }
             />
-          </Box>
+          </Flex>
         <Heading
           fontWeight={'700'}
           color={"blue.100"}

@@ -53,8 +53,8 @@ import bdealsvg from "../assets/undraw_Business_deal_re_up4u.svg";
             direction={{ base: 'column', sm: 'row' }}>
             <Button
               rounded={'full'}
-              size={'lg'}
-              fontWeight={'normal'}
+              size={'md'}
+              fontWeight={'bold'}
               px={6}
               color={'white.50'}
               bg={'green.200'}
