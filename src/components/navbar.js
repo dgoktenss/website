@@ -42,7 +42,7 @@ export default function WithSubnavigation() {
         color={'blue.300'}
         minH={'60px'}
         py={{ base: 2 }}
-        px={{ base: 4 }}
+        px={{ base: 5 }}
         borderBottom={0}
         borderStyle={'solid'}
         borderColor={useColorModeValue('gray.200', 'gray.900')}
@@ -60,14 +60,17 @@ export default function WithSubnavigation() {
             aria-label={'Toggle Navigation'}
           />
         </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+        <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'left' }}>
+          {/* <Text
+            textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
+            fontFamily={'heading'}
+            color={useColorModeValue('gray.800', 'white')}>
+            Logo
+          </Text> */}
 
           <Image
-          mt={3}
-          ml={12}
-          textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
           src={logo}
-          w={{ base: "35%", sm: "22%", lg: "15%" }}
+          w={{ base: "65%", sm: "42%", lg: "15%" }}
          />
          <Spacer />
         <Flex display={{ base: 'none', md: 'flex' }} mr={12} mt={3}>
@@ -76,26 +79,6 @@ export default function WithSubnavigation() {
           
         </Flex>
         
-        {/* <Stack
-          flex={{ base: 1, md: 0 }}
-          justify={'flex-end'}
-          direction={'row'}
-          spacing={6}>
-
-
-          <Button
-            display={{ base: 'none', md: 'inline-flex' }}
-            fontSize={'md'}
-            fontWeight={600}
-            color={'white'}
-            bg={'green.200'}
-            href={'#'}
-            _hover={{
-              bg: 'pink.300',
-            }}>
-            SQUARELY
-          </Button>
-        </Stack> */}
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
@@ -109,7 +92,7 @@ export default function WithSubnavigation() {
 const DesktopNav = () => {
   const linkColor = 'blue.300';
   const linkHoverColor = 'green.100';
-  const popoverContentBgColor = useColorModeValue('white', 'gray.800');
+  const popoverContentBgColor = 'white';
 
   return (
     <Stack direction={'row'} spacing={4}>
@@ -250,17 +233,16 @@ const MobileNavItem = ({label, children, href} ) => {
   );
 };
 
-// interface NavItem {
-//   label: string;
-//   subLabel?: string;
-//   children?: Array<NavItem>;
-//   href?: string;
-// }
 
 
 const NAV_ITEMS= [
   {
+    label: 'Home',
+    href: '/',
+  },
+  {
     label: 'About',
+    href: '/about',
     children: [
       {
         label: 'Impact',
@@ -276,7 +258,7 @@ const NAV_ITEMS= [
   },
   {
     label: 'Advisory',
-    href: '#',
+    href: '/advisory',
   },
   {
     label: 'Technology',

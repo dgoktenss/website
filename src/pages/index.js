@@ -237,16 +237,16 @@ const IndexPage = () => {
 
     <Box w={'100%'} bg={'ssgreen.200'}>
     <Stack as={Container} maxW={'6xl'} textAlign={'center'} py={12} mt={0}>
-    <Heading mb={10} fontSize={'4xl'} color={'white.50'} mt={12}> Our Advisory Services</Heading>
+    <Heading mb={10} fontSize={'4xl'} color={'white.50'} mt={12}> Our Expertise</Heading>
    <Box mx={8} maxW={'100%'} py={12} textAlign={'center'}>
     <SimpleGrid columns={{ base: 1, md: 4 }} textAlign={'center'} spacing={12}>
       <Feature
-          title={'ESG & Sustainability'}
+          title={'ESG & Sustainability Advisory'}
           // text={'Take a more responsible approach to investing while doing the best for your long-term security.'}
           icon={<img src={esg}/>}
         />
         <Feature
-          title={'Sustainable Investing'}
+          title={'Responsible Investment & Sustainable Finance'}
           // text={'Take a more responsible approach to investing while doing the best for your long-term security.'}
           icon={<img src={investing}/>}
         />
@@ -256,7 +256,7 @@ const IndexPage = () => {
           icon={<img src={climatechange}/>}
         />
          <Feature
-          title={'Corporate Social Responsibility'}
+          title={'Corporate Social Responsibility & Social Impact'}
           // text={'Take a more responsible approach to investing while doing the best for your long-term security.'}
           icon={<img src={corpsoc}/>}
         />
@@ -299,8 +299,9 @@ const IndexPage = () => {
               Sustainability reports  <br/>  made easier than ever before
               </Text>
               <Text textAlign={'center'} fontFamily={'body'} fontWeight={400} fontSize={'md'}  color={'blue.300'}>
-              Squarely Sustainability is an  <br/> innovative sustainability reporting tool 
-              <br/> that automates complex processes and tasks.
+              Squarely Sustainability is an
+ innovative sustainability reporting tool that  <br/> 
+ automates complex processes related to  <br/>  disclosures and reporting.
               </Text>
               <Button
           align={'center'}
@@ -345,8 +346,9 @@ const IndexPage = () => {
             Measuring and managing  <br/> genuine impact
               </Text>
               <Text textAlign={'center'} fontFamily={'body'} fontWeight={400} fontSize={'md'}  color={'blue.300'}>
-              Squarely Impact allows NGOs <br/>  companies, and governments to 
-              track <br/>  impact  until the very last bit of their projects. 
+              Squarely Impact allows NGOs,  <br/> 
+ companies, and governments to  <br/>  measure the 
+ impact  of <br/>  their community programs
               </Text>
               <Button
           align={'center'}

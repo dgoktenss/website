@@ -127,7 +127,7 @@ function LargeWithNewsletter() {
             <Link href={'#'}>Terms of Service</Link>
             <Link href={'#'}>Privacy Policy</Link>
           </Stack>
-          <Stack align={'flex-start'}>
+          {/* <Stack align={'flex-start'}>
             <ListHeader>Stay up to date</ListHeader>
             <Stack direction={'row'}>
               <Input
@@ -148,7 +148,7 @@ function LargeWithNewsletter() {
                 icon={<BiMailSend />}
               />
             </Stack>
-          </Stack>
+          </Stack> */}
         </SimpleGrid>
       </Container>
     </Box>
